@@ -1,0 +1,110 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	
+}
+body {
+	background-image: url("Coffee-Table-Books-2.jpg ");
+        background-repeat:no-repeat;
+       background-size:cover;
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: #5D4954;
+	font-family: 'Poppins', sans-serif;
+
+}
+
+.logo{
+	color: rgb(247, 242, 242);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 22px;
+
+}
+.ul-links{
+	display: flex;
+	width: 30%;
+	justify-content: space-around;
+
+}
+.ul-links li{
+	list-style: none;
+
+}
+.ul-links a{
+	color: rgb(236, 230, 230);
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+
+}
+.bgb{
+	display: none;
+	cursor: pointer;
+}
+.bgb div{
+	width: 25px;
+	height: 3px;
+	background-color: rgb(236, 230, 230);
+	margin: 5px;
+
+
+}
+@media screen and (max-width:1024px){
+	.ul-links{
+	
+		width: 60%;
+	
+	}
+   }
+@media screen and (max-width:768px){
+	body{
+		overflow-x: hidden;
+	}
+.ul-links{
+	position: absolute;
+	right: 0px;
+	height: 92vh;
+	top: 8vh;
+	width: 30vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-color: #5D4954;
+	transform: translateX(100%);
+	transition: transform 0.5s ease-in;
+	
+}
+.ul-links li{
+	opacity: 0;
+	
+}
+.bgb{
+	display: block;
+}
+
+}
+.nav-active{
+	transform: translateX(0%);
+}
+
+@keyframes navLinkfade{
+
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+
+	}
+}
